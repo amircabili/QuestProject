@@ -28,4 +28,4 @@ const deleteItem = (url, id) =>
 
 
 
-export default {getAllItems, getItem, createItem, updateItem, deleteItem,getUserFullData}
+export default {getAllItems, getItem, createItem, updateItem, deleteItem}
