@@ -18,8 +18,7 @@ import '../Css/App.css';
 
         useEffect(async () =>
         {
-            setId(userId);
-           console.log('userId - ', userId)
+           setId(userId);
            navigate('/flights/' + userId);
         }, [userId])
   

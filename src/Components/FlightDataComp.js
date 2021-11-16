@@ -15,13 +15,13 @@ function FlightDataComp(props) {
 
   
     useEffect(async () =>
-    {                 
+    {
         let userID  = params.id;
         let resp = await utils.getAllItems("https://interview-mock.herokuapp.com/api/workers/" + params.id)
         let flights = resp.data;        
         console.log('props.flightId -' + props.flightid);      
         let userFlight = flights.filter(x=>x.num == props.flightid)                        
-        setFlights(userFlight);  
+        setFlights(userFlight);
 
     }, [props.flightid])
 

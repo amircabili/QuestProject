@@ -21,32 +21,33 @@ import '../Css/App.css';
           let resp = await utils.getAllItems("https://interview-mock.herokuapp.com/api/workers/" + userid);
           let FlightsData = resp.data  
           SetTimer(timer+1);
-          setFlights(FlightsData);    
-          console.log('flights -' + flights);  
+          setFlights(FlightsData);
 
   }, [ params.id])
 
-
    useEffect(  () =>
-        {           
+        {
             const intervalId = setInterval(async() => {                             
                 let userid = params.id;
                 setUserId(userid);     
                 let resp = await utils.getAllItems("https://interview-mock.herokuapp.com/api/workers/" + userid);
-                let FlightsData = resp.data  
-                
+                let FlightsData = resp.data
                 setFlights(FlightsData);    
-                console.log('flights -' + flights);         
+
             }, 5000)
             ///this reloads the function every one minute ,and starts over on every change of worker(click on worker button restarts the timer too)
             return () => clearInterval(intervalId); //This is important
-
         }, [timer])
+
+     useEffect(async () =>
+     {
+         setShowFlightData(false)
+         //navigate('/flights/' + userId);
+
+     }, [params])
  
     useEffect(async () =>
         {
-           console.log('flightId - ', flightId)      
-          
             setShowFlightData(true)
            //navigate('/flights/' + userId);
 
