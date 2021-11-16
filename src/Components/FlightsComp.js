@@ -42,14 +42,12 @@ import '../Css/App.css';
      useEffect(async () =>
      {
          setShowFlightData(false)
-         //navigate('/flights/' + userId);
 
      }, [params])
  
     useEffect(async () =>
         {
             setShowFlightData(true)
-           //navigate('/flights/' + userId);
 
         }, [flightId])
          
