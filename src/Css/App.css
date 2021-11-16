@@ -41,25 +41,29 @@
   min-height: 600px;
 }
 
+
+.flightRow div span{
+  position: relative;
+  top: 10px;
+}
+
+
+
+.flightRow{
+  min-height: 50px;
+  position: relative;
+
+  margin: 0;
+  border-bottom: solid 1px gray;
+}
 @media only screen and (max-width: 768px) {
   .local-min-height-500{
     min-height: auto;
+    overflow: auto;
   }
-}
 
-.flightRow{
-    min-height: 50px;
-    position: relative;
-    
-    margin: 0;
-    border-bottom: solid 1px gray;
-}
+  .flightRow{
+    min-height:80px;
+  }
 
-
-.flightRow div span{
- 
-  position: relative;
-  top: 10px;
- 
-  
 }
