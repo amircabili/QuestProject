@@ -34,7 +34,7 @@ import '../Css/App.css';
                 let FlightsData = resp.data
                 setFlights(FlightsData);    
 
-            }, 5000)
+            }, 60000)
             ///this reloads the function every one minute ,and starts over on every change of worker(click on worker button restarts the timer too)
             return () => clearInterval(intervalId); //This is important
         }, [timer])
