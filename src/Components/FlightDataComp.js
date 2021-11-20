@@ -9,11 +9,6 @@ function FlightDataComp(props) {
 
     const params = useParams();
 
-    const [titles, setTitles] = useState([]) 
-    const [flights, setFlights] = useState([]) 
-    const [isVisible, setVisible] = useState(false)
-
-  
     useEffect(async () =>
     {
         let userID  = params.id;

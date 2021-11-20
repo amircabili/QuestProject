@@ -19,7 +19,7 @@ import '../Css/App.css';
                     </div>
                     <div className="col-sm-12 col-md-9 left-panel border-end">
                         <Routes>
-                            <Route path="/" element={<FlightsComp user="12121212"/>} /> 
+                            <Route path="/" element={<FlightsComp />} />
                             <Route path="/flights" element={<FlightsComp />} />
                             <Route path="/flights/:id" element={<FlightsComp />} />
                         </Routes>
